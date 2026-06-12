@@ -843,7 +843,7 @@ function onStatusChange() {
 }
 
 function setRating(n) { rating=rating===n?0:n; renderCups(rating); }
-const cupLabels=['',"Couldn't finish it 😬","It was okay 🙂","Enjoyed it 😊","Really loved it 😍","Life-changing! 🌸"];
+const cupLabels=['',"Couldn\'t finish it 😬","It was okay 🙂","Enjoyed it 😊","Really loved it 😍","Life-changing! 🌸"];
 function renderCups(n) {
   document.querySelectorAll('.cup-btn').forEach((c,i)=>c.classList.toggle('on',i<n));
   const lbl=document.getElementById('cup-label'); if(lbl) lbl.textContent=n?cupLabels[n]:'';
@@ -906,7 +906,7 @@ function openReread(id) {
   const count=b.readCount||1;
   document.getElementById('rm-title').textContent=b.title;
   document.getElementById('rm-author').textContent=b.author+(b.year?' · '+fmtYear(b.year):'');
-  document.getElementById('rm-count-msg').innerHTML='↺ You've read this book <strong>'+count+'</strong> time'+(count!==1?'s':'')+' — starting read #'+(count+1);
+  document.getElementById('rm-count-msg').innerHTML='↺ You\'ve read this book <strong>'+count+'</strong> time'+(count!==1?'s':'')+' — starting read #'+(count+1);
   document.getElementById('rm-start').value=new Date().toISOString().slice(0,10);
   document.getElementById('rm-note').value='';
   document.getElementById('reread-modal').classList.add('open');
