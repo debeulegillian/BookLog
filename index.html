@@ -728,10 +728,10 @@ function render() {
         (b.status==='reading'&&b.totalPages?'<div class="progress-bar"><div class="progress-fill" style="width:'+pct+'%"></div></div><div class="progress-label">'+pct+'% complete</div>':'')+
       '</div>'+
       '<div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0">'+
-        (b.status==='want'?'<button class="btn btn-sm btn-finish" onclick="startReading(''+b.id+'')">▶ Start</button>':'')+
-        ((b.status==='reading'||b.status==='paused')?'<button class="btn btn-sm btn-finish" onclick="openFinish(''+b.id+'')">✓ Finish</button>':'')+
-        (b.status==='done'?'<button class="btn btn-sm btn-reread" onclick="openReread(''+b.id+'')">↺ Re-read</button>':'')+
-        '<button class="btn btn-sm" onclick="openEdit(''+b.id+'')">Edit</button>'+
+        (b.status==='want'?'<button class="btn btn-sm btn-finish" onclick="startReading(\'+b.id+\')">▶ Start</button>':'')+
+        ((b.status==='reading'||b.status==='paused')?'<button class="btn btn-sm btn-finish" onclick="openFinish(\'+b.id+\')">✓ Finish</button>':'')+
+        (b.status==='done'?'<button class="btn btn-sm btn-reread" onclick="openReread(\'+b.id+\')">↺ Re-read</button>':'')+
+        '<button class="btn btn-sm" onclick="openEdit(\'+b.id+\')">Edit</button>'+
       '</div></div></div>';
     }).join('');
   }
